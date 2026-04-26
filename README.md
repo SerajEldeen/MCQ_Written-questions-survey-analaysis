@@ -47,26 +47,11 @@ Power BI will be used for **Descriptive Statistics, Correlation Exploration, and
 
 ## B. Data Visualization
 
-Create dashboards including:
+The analysis results in a comprehensive dashboard that tracks student sentiment and academic trends.
 
-- Bar Charts:
-  - Exam type preference
-  - Stress levels by exam type
-- Pie Charts:
-  - Gender distribution
-  - Level of study distribution
-- KPI Cards:
-  - Average CGPA
-  - Average stress score
-- Stacked Charts:
-  - Stress vs exam type across study levels
+![Student Examination Stress Dashboard](./Dashboard.png)
 
-## C. Correlation Exploration
-
-- Use scatter plots and heatmaps (if possible)
-- Identify relationships such as:
-  - Time pressure vs written exam stress
-  - Preparation difficulty vs performance perception
+- Preparation difficulty vs performance perception
 
 ---
 
