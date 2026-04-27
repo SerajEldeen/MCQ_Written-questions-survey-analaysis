@@ -73,55 +73,53 @@ Example:
 
 ## B. Inferential Statistics
 
-### 1. T-Test
-
-- Compare means between two groups
-
-Example:
-
-- Stress level in MCQ vs Written exams
-
-Goal:
-
-- Determine if difference is statistically significant
+### 1. Independent Samples T-Test
+* **Goal:** Compare stress levels between students who prefer MCQ vs. Written exams.
+* **Results:** * **T-statistic:** `1.094`
+    * **P-value:** `0.278`
+* **Conclusion:** Since the P-value > 0.05, the difference is **not statistically significant**. A student's preferred exam type does not predict their general stress level.
 
 ---
 
 ### 2. Chi-Square Test
-
-- Test relationships between categorical variables
-
-Example:
-
-- Gender vs Exam Preference
-
-Goal:
-
-- Check dependency between variables
+* **Goal:** Test the relationship between **Gender** and **Preferred System Type**.
+* **Results:**
+    * **Chi-Square Statistic:** `7.046`
+    * **P-value:** `0.133`
+* **Conclusion:** No significant dependency found. Exam preference is independent of gender in this dataset.
 
 ---
 
 ## C. Regression Analysis
 
-Build a predictive model:
+We built a predictive model to understand the factors driving **Written Exam Time Stress**.
 
-### Target Variable:
+### OLS Regression Results
+> **Note:** Highlighted values indicate key performance and significance metrics.
 
-- Written Exam Stress
+| Metric | Value |
+| :--- | :--- |
+| **Dep. Variable** | Likert_Written_Time_Stress |
+| **R-squared** | <mark><b>0.298</b></mark> |
+| **Adj. R-squared** | 0.283 |
+| **Prob (F-statistic)** | <mark><b>2.46e-13</b></mark> |
 
-### Features (Independent Variables):
+#### Detailed Coefficients:
+| Variable | coef | P>\|t\| | Interpretation |
+| :--- | :--- | :--- | :--- |
+| **const** | 1.3458 | 0.001 | Baseline stress level |
+| **Likert_Stress_Comparison** | <mark>0.4695</mark> | <mark><b>0.000</b></mark> | **Strongest Predictor** (Positive Impact) |
+| **Likert_MCQ_Guessing** | <mark>0.2254</mark> | <mark><b>0.001</b></mark> | **Significant** (Guessing increases stress) |
+| **Better System** | -0.2224 | 0.066 | Marginally Significant |
+| **Likert_Written_Measure**| -0.0711 | 0.294 | Not Significant |
 
-- Time Pressure
-- MCQ Ease of Preparation
-- Exam Frequency
-- Perceived Fairness
-
-### Purpose:
-
-- Understand which factors most influence student stress
+### Final Insight:
+The model explains **30%** of the variance in time-related stress. The most critical discovery is that students who rely on **Guessing** in MCQs face significantly higher stress in written formats, and the **Mental Comparison** between systems is the primary psychological driver of anxiety.
 
 ---
 
+### Analysis Visualization
+![Factors Influencing Written Exam Time Stress](https://github.com/SerajEldeen/MCQ_Written-questions-survey-analaysis/blob/main/Factors%20Influencing%20Written%20Exam%20Time%20Stress.png?raw=true)
 # 4. Interpretation & Reporting
 
 ## The final results will be documented in a Word report.
